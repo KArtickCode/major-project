@@ -68,6 +68,7 @@ Each service is independent and communicates via Kafka events.
 
 ## 📁 Project Structure
 
+
 User Service
 ├── Controller
 ├── Service
@@ -87,7 +88,6 @@ Wallet Service
 ├── Repository
 ├── Models
 └── Kafka Consumer
-
 
 ---
 
