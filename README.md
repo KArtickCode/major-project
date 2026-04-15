@@ -34,6 +34,8 @@ A scalable **microservices-based E-Wallet application** built using Spring Boot,
 This project follows **Microservices Architecture + Event-Driven Design**
 
 User Service → Kafka → Wallet Service
+
+
 Transaction Service → Kafka → Wallet Service
 
 
