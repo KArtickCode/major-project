@@ -70,7 +70,7 @@ User Service → Transaction Service → Kafka → Wallet Service
 ---
 
 ## 📁 Project Structure
-
+```
 User Service
 ├── Controller
 ├── Service
@@ -90,6 +90,7 @@ Wallet Service
 ├── Repository
 ├── Models
 └── Kafka Consumer
+```
 
 
 ---
