@@ -1,51 +1,47 @@
-# 💰 E-Wallet Microservices System
+<h1 align="center">💰 E-Wallet System</h1>
 
-A scalable **microservices-based E-Wallet application** built using Spring Boot, designed for user management, wallet balance handling, and transaction processing using **event-driven architecture with Apache Kafka**.
+<p align="center">
+A scalable <b>Microservices-based E-Wallet Application</b> built using Spring Boot with Apache Kafka for event-driven communication between services.
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Spring%20Boot-Microservices-green?style=for-the-badge&logo=springboot"/>
+  <img src="https://img.shields.io/badge/Java-17+-orange?style=for-the-badge&logo=java"/>
+  <img src="https://img.shields.io/badge/Apache%20Kafka-Event%20Driven-black?style=for-the-badge&logo=apachekafka"/>
+  <img src="https://img.shields.io/badge/MySQL-Database-blue?style=for-the-badge&logo=mysql"/>
+  <img src="https://img.shields.io/badge/Maven-Build-red?style=for-the-badge&logo=apachemaven"/>
+</p>
 
 ---
 
-## 🚀 Features
+## ✨ Overview
+
+The **E-Wallet System** is a distributed backend application built using **microservices architecture**, designed for user management, wallet operations, and transaction processing with **Kafka-based asynchronous communication**.
+
+---
+
+## 🚀 Microservices Architecture
 
 ### 👤 User Service
-- Create and manage users  
-- Store user details (name, email, phone)  
-- Provides user data to other microservices  
-
----
+- Handles user registration and management  
+- Stores user details (name, email, phone)  
+- Provides data to other services  
 
 ### 🔄 Transaction Service
-- Handles money transfer between users  
+- Handles money transfer requests  
 - Creates transaction records  
-- Publishes transaction events to Kafka  
-- Tracks transaction status  
-
----
+- Publishes events to Kafka  
 
 ### 💰 Wallet Service
-- Maintains user wallet balance  
-- Updates balance based on transaction events  
-- Consumes Kafka messages asynchronously  
-- Ensures data consistency across services  
+- Manages wallet balance  
+- Consumes Kafka events  
+- Updates balance automatically  
 
 ---
 
-## 🧠 Architecture
+## 📡 Event-Driven Communication (Kafka)
 
-This project follows **Microservices Architecture + Event-Driven Design**
-
-User Service → Kafka → Wallet Service
-
-
-Transaction Service → Kafka → Wallet Service
-
-
-Each service is independent and communicates via Kafka events.
-
----
-
-## 📡 Event Streaming (Kafka)
-
-- Apache Kafka is used for asynchronous communication  
+- Apache Kafka is used for asynchronous messaging  
 - Producer Services:
   - User Service  
   - Transaction Service  
@@ -55,61 +51,59 @@ Each service is independent and communicates via Kafka events.
 
 ---
 
-## 🛠️ Tech Stack
+## 🔄 System Flow
 
-- Backend: Spring Boot (Microservices)  
-- Messaging: Apache Kafka  
-- Architecture: Microservices + Event Driven  
-- Database: MySQL (per service)  
-- Build Tool: Maven  
-- Language: Java  
+User Service → Transaction Service → Kafka → Wallet Service
+
+
+---
+
+## 🧠 Tech Stack
+
+- ☕ Java 17  
+- 🌱 Spring Boot (Microservices)  
+- 📡 Apache Kafka  
+- 🗄️ MySQL (per service)  
+- 🔧 Maven  
+- 🧩 REST APIs  
 
 ---
 
 ## 📁 Project Structure
 
-### 👤 User Service
-- Controller  
-- Service  
-- Repository  
-- DTO  
-- Models  
+User Service
+├── Controller
+├── Service
+├── Repository
+├── DTO
+└── Models
 
-### 🔄 Transaction Service
-- Controller  
-- Service  
-- Repository  
-- DTO  
-- Models  
+Transaction Service
+├── Controller
+├── Service
+├── Repository
+├── DTO
+└── Models
 
-### 💰 Wallet Service
-- Service  
-- Repository  
-- Models  
-- Kafka Consumer  
+Wallet Service
+├── Service
+├── Repository
+├── Models
+└── Kafka Consumer
+
 
 ---
 
 ## 🔗 API Endpoints
 
 ### 👤 User Service
-- POST `/users` → Create User  
+- `POST /users` → Create User  
 
 ### 🔄 Transaction Service
-- POST `/transactions` → Create Transaction  
+- `POST /transactions` → Create Transaction  
 
 ### 💰 Wallet Service
-- Internal service (Kafka-based updates)
-
----
-
-## 🔄 System Flow
-
-1. User is created via User Service  
-2. Transaction is initiated via Transaction Service  
-3. Transaction event is sent to Kafka  
-4. Wallet Service consumes event  
-5. Wallet balance is updated automatically  
+- Kafka-based internal processing  
 
 ---
 
@@ -118,9 +112,9 @@ Each service is independent and communicates via Kafka events.
 - Microservices Architecture  
 - Event-Driven Design  
 - Apache Kafka Producer–Consumer  
-- REST APIs  
 - DTO Pattern  
 - Service Layer Architecture  
+- Distributed System Communication  
 
 ---
 
@@ -129,8 +123,7 @@ Each service is independent and communicates via Kafka events.
 - API Gateway integration  
 - JWT Authentication  
 - Redis caching for wallet balance  
-- Docker containerization  
-- Kubernetes deployment  
+- Docker & Kubernetes deployment  
 - Payment gateway integration  
 
 ---
@@ -143,4 +136,4 @@ Each service is independent and communicates via Kafka events.
 
 ## ⭐ Support
 
-If you like this project, please give it a ⭐ on GitHub!
+If you like this project, give it a ⭐ on GitHub!
