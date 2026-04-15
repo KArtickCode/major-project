@@ -68,26 +68,25 @@ Each service is independent and communicates via Kafka events.
 
 ## 📁 Project Structure
 
+### 👤 User Service
+- Controller  
+- Service  
+- Repository  
+- DTO  
+- Models  
 
-User Service
-├── Controller
-├── Service
-├── Repository
-├── DTO
-└── Models
+### 🔄 Transaction Service
+- Controller  
+- Service  
+- Repository  
+- DTO  
+- Models  
 
-Transaction Service
-├── Controller
-├── Service
-├── Repository
-├── DTO
-└── Models
-
-Wallet Service
-├── Service
-├── Repository
-├── Models
-└── Kafka Consumer
+### 💰 Wallet Service
+- Service  
+- Repository  
+- Models  
+- Kafka Consumer  
 
 ---
 
